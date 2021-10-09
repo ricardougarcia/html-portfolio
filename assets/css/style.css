@@ -1,0 +1,78 @@
+* {
+  /* border: solid 1px red; */
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background: rgb(18, 92, 34);
+}
+
+header nav {
+  position: relative;
+  height: 55px;
+  color: rgb(60, 97, 86);
+}
+
+header nav a,
+header nav a:visited {
+  color: rgb(143, 204, 206);
+}
+
+header nav ul {
+  position: absolute;
+  right: 30px;
+}
+
+header nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+main {
+  background-color: rgb(143, 204, 206);
+}
+
+#content {
+  width: 40%;
+  margin: 0 auto;
+}
+
+#content h1,
+#content p,
+#contact h2 {
+  text-align: center;
+}
+
+#contact {
+  background-color: lightblue;
+  color: #787878;
+}
+
+#contact form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+#contact form input,
+#contact form button {
+  display: block;
+  margin: 15px auto;
+}
+
+footer {
+  background: rgb(60, 97, 86);
+  color: #787878;
+}
+
+footer p {
+  margin: 0;
+  padding: 25px;
+}
