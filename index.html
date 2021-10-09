@@ -1,51 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ricardo's Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
-
   <body>
-    <!-- header with some links: github, Portfolio, contact -->
+    <!-- Header -->
     <header>
-      <nav>
-        <ul>
-          <li><a href="">Github</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
+      <h1>Ricardo's Portfolio</h1>
+      <p>This will be my about me section here.</p>
     </header>
-    <!-- main -->
-    <main>
-      <!-- content  -->
-      <section id="content">
-        <h1>My Portfolio</h1>
-        <p>Information about me here</p>
-      </section>
 
-      <!-- create an aside here with project boxes -->
+    <!-- Navbar -->
+    <nav>
+      <a href="#">Github</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact Me</a>
+    </nav>
+
+    <!-- Body -->
+    <main>
+      <!-- Sidebar -->
       <aside>
-        <h2>some information here</h2>
+        <h2>When you change the screen size...</h2>
+        <p>The navbar and this sidebar will be stacked on top of each other!</p>
+        <p>
+          And the product cards will wrap around as the screen gets smaller.
+        </p>
       </aside>
 
-      <!-- contact form  -->
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-          <input name="name" type="text" placeholder="name" />
-          <input name="email" type="text" placeholder="email" />
-          <button>Send</button>
-        </form>
-      </section>
+      <!-- Product Cards -->
+      <div class="products">
+        <section class="card">
+          <header>Project 1</header>
+          <img src="./assets/images/camera.jpg" alt="project 1" />
+          <p>Brief description</p>
+        </section>
+
+        <section class="card">
+          <header>Project 2</header>
+          <img src="img here" alt="project 2" />
+          <p>Brief description</p>
+        </section>
+
+        <section class="card">
+          <header>Project 3</header>
+          <img src="img here" alt="project 3" />
+          <p>Brief description</p>
+        </section>
+
+        <section class="card">
+          <header>Project 4</header>
+          <img src="img here" alt="project 4" />
+          <p>Brief description</p>
+        </section>
+      </div>
     </main>
 
-    <!-- footer  -->
+    <!-- Footer -->
     <footer>
-      <p>&copy; 2021 Ricardo Garcia</p>
+      <h3>Made by Ricardo U Garcia 2021</h3>
     </footer>
   </body>
 </html>
