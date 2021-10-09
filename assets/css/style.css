@@ -1,4 +1,5 @@
 * {
+  border: solid 1px red;
   /* border: solid 1px red; */
 }
 
@@ -39,7 +40,12 @@ header nav li {
 main {
   background-color: rgb(143, 204, 206);
 }
-
+aside {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+}
 #content {
   width: 40%;
   margin: 0 auto;
