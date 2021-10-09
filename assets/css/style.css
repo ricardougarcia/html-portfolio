@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
   background: #27415a;
   color: #fff;
@@ -31,6 +31,15 @@ nav a {
   text-align: center;
 }
 
+.about-me {
+  flex: 4;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
 /* 
   What is the flex-wrap property?
   It specifies whether the flex items should wrap or not 
@@ -38,6 +47,10 @@ nav a {
 main {
   display: flex;
   flex-wrap: wrap;
+}
+
+main p {
+  display: flex;
 }
 
 aside {
@@ -58,7 +71,7 @@ footer {
   What does the justify-content property do?
   It is used to align the flex items; in our case, the product cards 
   */
-.products {
+.projects {
   flex: 4;
   background-color: #8d9784;
   padding: 20px;
@@ -105,3 +118,11 @@ footer {
     flex-direction: column;
   }
 }
+
+/* attempting to add the about me section as stackable, hwoever I am having trouble with appropraite code to separate from aside and .project */
+/* @media screen and (max-width: 768px) {
+  .about-me,
+  aside {
+    flex-direction: column;
+  }
+} */
