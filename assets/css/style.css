@@ -64,14 +64,34 @@ aside {
   flex: 1;
   background-color: #8d9784;
   padding: 80px;
-  text-align: center;
+  text-align: left;
 }
 
 footer {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background: #27415a;
   color: #fff;
+  margin-top: 5px;
+}
+
+#contactme {
+  justify-content: space-evenly;
+  flex: 1;
+  background-color: white;
+  list-style: none;
+}
+
+#contactme ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+#contactme h2 {
+  float: left;
+  margin: auto;
+  color: black;
 }
 
 /* 
@@ -79,7 +99,7 @@ footer {
   It is used to align the flex items; in our case, the product cards 
   */
 .projects {
-  flex: 4;
+  flex: 2;
   background-color: #8d9784;
   padding: 20px;
   display: flex;
