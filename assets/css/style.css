@@ -22,10 +22,6 @@ h3 {
   color: #fff;
 }
 
-/* 
-  What happens when we set the display property to flex?
-  The flex container becomes flexible 
-  */
 nav {
   display: flex;
   background-color: #95b8a4;
@@ -95,8 +91,7 @@ footer {
 }
 
 /* 
-  What does the justify-content property do?
-  It is used to align the flex items; in our case, the product cards 
+  
   */
 .projects {
   flex: 2;
@@ -143,6 +138,16 @@ footer {
   main,
   nav {
     flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactme h2,
+  ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
   }
 }
 
