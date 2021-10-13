@@ -1,31 +1,65 @@
 * {
-  border: red 1px;
   box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
+:root {
+  --main-font-color: rgb(37, 31, 22);
+  --secondary-font-color: rgb(243, 235, 235);
+  --main-header-color: rgb(245, 231, 231);
+  --secondary-header-color: rgb(27, 17, 44);
+}
 body {
-  font-family: Arial;
   margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 header {
   padding: 20px;
   text-align: left;
   background: #27415a;
-  color: #fff;
+  color: var(--main-header-color);
+}
+
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  clip-path: circle();
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 28px;
 }
 
 h3 {
   padding: 20px;
   text-align: center;
   background: #27415a;
-  color: #fff;
+  font-size: 18px;
 }
 
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* top navigation with links */
 nav {
   display: flex;
   background-color: #95b8a4;
   justify-content: right;
+  color: var(--secondary-font-color);
+  font-size: 18px;
+  letter-spacing: 0.4px;
 }
 
 nav a {
@@ -34,19 +68,6 @@ nav a {
   text-decoration: none;
 }
 
-.about-me {
-  flex: 4;
-  background-color: white;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-}
-
-/* 
-  What is the flex-wrap property?
-  It specifies whether the flex items should wrap or not 
-  */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -54,98 +75,111 @@ main {
 
 main p {
   display: flex;
+  color: var(--secondary-header-color);
+  font-size: 16px;
 }
-
+/* About me section on left side */
 aside {
   flex: 1;
   background-color: #8d9784;
-  padding: 80px;
+  padding: 20px;
   text-align: left;
+  color: var(--secondary-header-color);
+}
+aside p {
+  font-size: 16px;
+  padding-top: 8px;
+  letter-spacing: 0.7px;
+  line-height: 1.5;
 }
 
+aside h2 {
+  color: var(--secondary-header-color);
+}
+
+/* Footer */
 footer {
   padding: 10px;
   text-align: center;
   background: #27415a;
-  color: #fff;
+  color: rgb(245, 231, 231);
   margin-top: 5px;
 }
-
+/* Contact me section */
 #contactme {
-  justify-content: space-evenly;
-  flex: 1;
+  justify-content: right;
   background-color: white;
   list-style: none;
+  color: var(--secondary-header-color);
 }
 
 #contactme ul {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: right;
   margin-left: 0px;
+  padding-left: 0;
   width: 50%;
+  margin-right: 0;
 }
-
-/* #contactme header {
-  display: flex;
-  margin-left: 0px;
-} */
 
 #contactme li {
   padding: 8px 18px;
 }
 
 #contactme h2 {
-  margin: auto;
-  color: black;
+  color: var(--secondary-header-color);
   height: 20px;
   padding-left: 20px;
+  display: flex;
+  width: 50%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: none;
+  margin-left: none;
 }
 
-/* 
-  
-  */
+/* ID of all project cards */
 #projects {
   flex: 2;
-  background-color: #8d9784;
-  padding: 20px;
+  background-color: #9ea597;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  letter-spacing: 0.4px;
 }
 
-/* 
-  What is the flex property a shorthand property for?
-  It is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties 
-  What is it doing here?
-  We are making the product card not growable, not shrinkable, and with an initial length of 400px 
-  */
+/*individual project cards*/
 .card {
-  border-style: solid;
+  border-style: none;
   border-width: 1px;
   border-radius: 10px;
   padding: 10px;
   flex: 0 0 400px;
+  margin-left: -9px;
+  margin-right: -3px;
+  width: 100%;
 }
 
 .card h3 {
   padding: 20px;
+  color: var(--main-header-color);
 }
 
 .card p {
   text-align: center;
+  color: var(--main-font-color);
+  font-size: 16px;
+  padding-top: 3px;
+  padding-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
 .card img {
   width: 100%;
 }
 
-/* 
-  What does the flex-direction property define?
-  It defines in which direction the container wants to stack the flex items
-  What is it doing here? 
-  We are telling the main body and navbar to stack vertically in a column
-  */
 @media screen and (max-width: 768px) {
   main,
   nav {
@@ -160,13 +194,6 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     display: flex;
+    width: 50%;
   }
 }
-
-/* attempting to add the about me section as stackable, hwoever I am having trouble with appropraite code to separate from aside and .project */
-/* @media screen and (max-width: 768px) {
-  .about-me,
-  aside {
-    flex-direction: column;
-  }
-} */
